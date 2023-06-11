@@ -16,7 +16,7 @@ const PopularInst = () => {
             subHeading={'Our Instructor'}
             
             ></SectionTitle>
-            <div className='md:flex gap-4 mt-20 mb-20'>
+            <div className=' grid md:grid-cols-3 gap-4 mt-20 mb-20'>
                 {
                     instructor.map(item => <PopularInstCard
                     key={item._id}
