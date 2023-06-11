@@ -1,9 +1,17 @@
-import React from 'react';
+import Banner from "../Shared/Banner/Banner";
+
+
+
 
 const OurClass = () => {
     return (
         <div>
-            <h2>Our Class</h2>
+           
+          <Banner></Banner>
+          
+          
+            
+            
         </div>
     );
 };
