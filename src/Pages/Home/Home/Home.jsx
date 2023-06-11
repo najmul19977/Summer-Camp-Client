@@ -2,6 +2,7 @@
 import Header from '../../Header/Header';
 import Category from './Category/Category';
 import PopularClass from './PopularClass/PopularClass';
+import PopularInst from './PopularClass/PopularInst';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Header></Header>
             <Category></Category>
             <PopularClass></PopularClass>
+            <PopularInst></PopularInst>
         </div>
     );
 };
