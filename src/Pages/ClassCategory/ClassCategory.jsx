@@ -5,7 +5,7 @@ import ClassCategoryCard from '../ClassCategoryCard/ClassCategoryCard';
 const ClassCategory = () => {
     const [clas,setClas] = useState([]);
     useEffect(() =>{
-        fetch('AllClass.json')
+        fetch('http://localhost:5000/allclass')
         .then(res => res.json())
         .then(data =>setClas(data))
     },[])

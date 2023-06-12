@@ -5,7 +5,7 @@ import PopularInstCard from '../PopularInstCard/PopularInstCard';
 const PopularInst = () => {
     const [instructor,setInstructor] = useState([]);
     useEffect(() =>{
-        fetch('poulerInstractor.json')
+        fetch('http://localhost:5000/popularInstractor')
         .then(res => res.json())
         .then(data =>setInstructor(data))
     },[])
