@@ -4,11 +4,11 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 
 
 const NavBar = () => {
-    const {user,logOut} = useContext(AuthContext);
-    const handleLogOut = () =>{
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
         logOut()
-        .then(()=>{})
-        .catch(error =>console.log(error));
+            .then(() => { })
+            .catch(error => console.log(error));
 
     }
     return (
@@ -21,16 +21,16 @@ const NavBar = () => {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to=''>Home</Link></li>
                         <li><Link to='ourclass'>Our Class</Link></li>
-                       
+
                         <li><Link to='instructor'>Our Instructor</Link></li>
                         <li><Link to='deshbord'>Deshbord</Link></li>
                         <li><Link to='secret'>Secrete</Link></li>
-                        
+
                         {
                             user ? <>
-                            <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
+                                <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
                             </> : <>
-                            <li><Link to='login'>Login</Link></li>
+                                <li><Link to='login'>Login</Link></li>
                             </>
                         }
                     </ul>
@@ -39,19 +39,24 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                <li><Link to=''>Home</Link></li>
-                <li><Link to='ourclass'>Our Class</Link></li>
-                   
+                    <li><Link to=''>Home</Link></li>
+                    <li><Link to='ourclass'>Our Class</Link></li>
+
                     <li><Link to='instructor'>Our Instructor</Link></li>
                     <li><Link to='deshbord'>Deshbord</Link></li>
                     <li><Link to='secret'>Secrete</Link></li>
                     {
-                            user ? <>
+                        user ? <>
+                            <div className="avatar">
+                                <div className="w-10 h-10 ml-4 mr-4 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src={user?.photoURL} />
+                                </div>
+                            </div>
                             <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
-                            </> : <>
+                        </> : <>
                             <li><Link to='login'>Login</Link></li>
-                            </>
-                        }
+                        </>
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
