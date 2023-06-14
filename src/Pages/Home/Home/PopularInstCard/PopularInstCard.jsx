@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const PopularInstCard = ({ item }) => {
     const {image,_id,title,course_Experience,name,email} =item

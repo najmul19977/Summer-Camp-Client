@@ -7,6 +7,8 @@ import Error from "../Pages/Error/Error";
 import OurClass from "../Pages/OurClass/OurClass";
 import Instructor from "../Pages/Instructor/Instructor";
 import Deshbord from "../Pages/Deshbord/Deshbord";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 
   export const router = createBrowserRouter([
     {
@@ -28,6 +30,14 @@ import Deshbord from "../Pages/Deshbord/Deshbord";
         {
           path:'deshbord',
           element:<Deshbord></Deshbord>
+        },
+        {
+          path:'login',
+          element:<Login></Login>
+        },
+        {
+          path:'signup',
+          element:<SignUp></SignUp>
         }
         
       ]
