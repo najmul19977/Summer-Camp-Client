@@ -17,6 +17,7 @@ const SignUp = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
+            
             updateUserProfile(data.name,data.photoURL)
             .then(() =>{
                 console.log('user profile info updated');

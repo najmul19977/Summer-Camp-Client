@@ -50,7 +50,7 @@ import MyClass from "../Pages/Deshbord/MyClass/MyClass";
     {
       
         path:'deshbord',
-        element:<Deshbord></Deshbord>,
+        element:<PrivateRouts><Deshbord></Deshbord></PrivateRouts>,
         children:[
          {
           path:'myclass',
