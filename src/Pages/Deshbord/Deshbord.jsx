@@ -16,10 +16,10 @@ const Deshbord = () => {
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
-                    <li><Link><FaHome></FaHome>User Home</Link></li>
-                    <li><Link to='myclass'><FaShoppingCart></FaShoppingCart> My Class</Link></li>
-                    <li><Link><FaWallet></FaWallet>Payment History</Link></li>
-                    <li><Link><FaCalendarAlt></FaCalendarAlt>Reservations</Link> </li>
+                    <li><Link to='/deshbord/home'><FaHome></FaHome>User Home</Link></li>
+                    <li><Link to='/deshbord/myclass'><FaShoppingCart></FaShoppingCart> My Class</Link></li>
+                    <li><Link to='/deshbord/history'><FaWallet></FaWallet>Payment History</Link></li>
+                    <li><Link to='/deshbord/reservations'><FaCalendarAlt></FaCalendarAlt>Reservations</Link> </li>
                     <div className="divider"></div>
                     <li><Link to="/"><FaHome></FaHome>Home</Link></li>
                     <li><Link to="/ourclass"><FaReadme></FaReadme>Our Class</Link></li>
