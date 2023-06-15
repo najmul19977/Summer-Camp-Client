@@ -11,6 +11,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Sectet from "../Pages/Sectet/Sectet";
 import PrivateRouts from "./PrivateRouts";
+import MyClass from "../Pages/Deshbord/MyClass/MyClass";
 
   export const router = createBrowserRouter([
     {
@@ -30,10 +31,6 @@ import PrivateRouts from "./PrivateRouts";
           element:<Instructor></Instructor>
         },
         {
-          path:'deshbord',
-          element:<Deshbord></Deshbord>
-        },
-        {
           path:'login',
           element:<Login></Login>
         },
@@ -46,7 +43,20 @@ import PrivateRouts from "./PrivateRouts";
           element:<PrivateRouts><Sectet></Sectet></PrivateRouts>
         }
         
-      ]
+      ],
+    
+      
+    },
+    {
+      
+        path:'deshbord',
+        element:<Deshbord></Deshbord>,
+        children:[
+         {
+          path:'myclass',
+          element:<MyClass></MyClass>
+         }
+        ]
       
     },
     {
