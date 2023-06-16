@@ -1,12 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome, FaReadme, FaChalkboard, FaUsers } from 'react-icons/fa';
+import useAdmin from "../../Hooks/useAdmin";
 
 
 
 const Deshbord = () => {
 
     //TODO:
-    const isAdmin = true;
+    //const isAdmin = true;
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="drawer lg:drawer-open">
@@ -24,7 +26,7 @@ const Deshbord = () => {
                     {
                         isAdmin ? <>
                             <li><Link to='/deshbord/home'><FaHome></FaHome>Admin Home</Link></li>
-                            <li><Link to='/deshbord/myclass'><FaShoppingCart></FaShoppingCart> Add Class</Link></li>
+                            <li><Link to='/deshbord/addclass'><FaShoppingCart></FaShoppingCart> Add Class</Link></li>
                             <li><Link to='/deshbord/reservations'><FaCalendarAlt></FaCalendarAlt>Manage Class</Link> </li>
                             <li><Link to='/deshbord/allusers'><FaUsers></FaUsers>Manage User</Link> </li>
 

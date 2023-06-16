@@ -13,6 +13,8 @@ import Sectet from "../Pages/Sectet/Sectet";
 import PrivateRouts from "./PrivateRouts";
 import MyClass from "../Pages/Deshbord/MyClass/MyClass";
 import AllUser from "../Pages/Deshbord/AllUser/AllUser";
+import AddClass from "../Pages/Deshbord/AddClass/AddClass";
+import AdminRouts from "./AdminRoutes";
 
   export const router = createBrowserRouter([
     {
@@ -60,6 +62,10 @@ import AllUser from "../Pages/Deshbord/AllUser/AllUser";
          {
           path:'allusers',
           element:<AllUser></AllUser>
+         },
+         {
+          path:'addclass',
+          element:<AdminRouts><AddClass></AddClass></AdminRouts>
          }
         ]
       
