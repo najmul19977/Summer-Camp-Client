@@ -12,6 +12,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Sectet from "../Pages/Sectet/Sectet";
 import PrivateRouts from "./PrivateRouts";
 import MyClass from "../Pages/Deshbord/MyClass/MyClass";
+import AllUser from "../Pages/Deshbord/AllUser/AllUser";
 
   export const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ import MyClass from "../Pages/Deshbord/MyClass/MyClass";
          {
           path:'myclass',
           element:<MyClass></MyClass>
+         },
+         {
+          path:'allusers',
+          element:<AllUser></AllUser>
          }
         ]
       
