@@ -5,10 +5,11 @@ import PopularInstCard from '../PopularInstCard/PopularInstCard';
 const PopularInst = () => {
     const [instructor,setInstructor] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/popularInstractor')
+        fetch('https://summer-camp-server-ivory-mu.vercel.app/popularInstractor')
         .then(res => res.json())
         .then(data =>setInstructor(data))
     },[])
+    console.log(instructor);
     return (
         <section>
              <SectionTitle

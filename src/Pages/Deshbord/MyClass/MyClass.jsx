@@ -6,7 +6,15 @@ import Swal from "sweetalert2";
 const MyClass = () => {
     const [cart,refetch] = useCart();
     //console.log(cart);
-    const total = cart.reduce((sum, item) => item.course_Free  + sum, 0);
+    const total = cart.reduce((sum, item) => {
+        console.log("sum kot",sum)
+        const price = parseFloat(item.course_Free);
+        console.log(price);
+        return price  + sum;
+        
+    },0);
+    
+    
 
     const handleDelete = (item) =>{
         Swal.fire({
@@ -19,7 +27,7 @@ const MyClass = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-               fetch(`http://localhost:5000/carts/${item._id}`,{
+               fetch(`https://summer-camp-server-ivory-mu.vercel.app/carts/${item._id}`,{
                 method:'DELETE'
                })
                .then(res =>res.json())

@@ -1,6 +1,6 @@
 
 
-const AllInstructorCart = (item) => {
+const AllInstructorCart = ({item}) => {
     const {image,name,email} =item;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">

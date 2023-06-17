@@ -6,7 +6,7 @@ import PopularCard from '../../../Shared/PopularCard/PopularCard';
 const PopularClass = () => {
     const [popular,setPopular] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/popularclass')
+        fetch('https://summer-camp-server-ivory-mu.vercel.app/popularclass')
         .then(res => res.json())
         .then(data =>setPopular(data))
     },[])

@@ -6,7 +6,7 @@ import AllInstructorCart from '../AllInstructorCart/AllInstructorCart';
 const Instructor = () => {
     const [allinstructor,setAllinstructor] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/allInstractor')
+        fetch('https://summer-camp-server-ivory-mu.vercel.app/allInstractor')
         .then(res => res.json())
         .then(data =>setAllinstructor(data))
     },[])

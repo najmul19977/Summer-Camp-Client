@@ -34,7 +34,7 @@ const Deshbord = () => {
                             <li><Link to='/deshbord/userhome'><FaHome></FaHome>User Home</Link></li>
                             <li><Link to='/deshbord/myclass'><FaShoppingCart></FaShoppingCart> My Class</Link></li>
                             <li><Link to='/deshbord/history'><FaWallet></FaWallet>Payment History</Link></li>
-                            <li><Link to='/deshbord/reservations'><FaCalendarAlt></FaCalendarAlt>Reservations</Link> </li>
+                            
 
                         </>
                     }

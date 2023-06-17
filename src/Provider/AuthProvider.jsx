@@ -1,9 +1,9 @@
-import React, { createContext, useEffect, useState } from 'react';
+import  { createContext, useEffect, useState } from 'react';
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from '../firebase/firebase.confige';
 import axios from 'axios';
 
- export const AuthContext = createContext(null);
+ export const AuthContext = createContext();
  const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
@@ -27,7 +27,7 @@ const AuthProvider = ({children}) => {
     }
 
     const logOut = () =>{
-        setLoading(true);
+        
         return signOut(auth);
     }
     const updateUserProfile = (name,photo) =>{
@@ -42,17 +42,20 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             console.log('currentUser',currentUser);
             // get and set token
-            if(currentUser){
-                axios.post('http://localhost:5000/jwt',{email:currentUser.email})
+            /* if(currentUser){
+                axios.post('https://summer-camp-server-ivory-mu.vercel.app/jwt',{email:currentUser.email})
                 .then(data =>{
+                   if(data.data){
                     console.log(data.data.token)
-                    localStorage.setItem('access-token',data.data.token)
+                    localStorage.setItem('access-token',data?.data?.token)
                     setLoading(false);
+                   }
                 })
             }
             else{
                 localStorage.removeItem('access-token')
-            }
+                setLoading(false);
+            } */
            
 
         });

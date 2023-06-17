@@ -5,10 +5,11 @@ import ClassCategoryCard from '../ClassCategoryCard/ClassCategoryCard';
 const ClassCategory = () => {
     const [clas,setClas] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/allclass')
+        fetch('https://summer-camp-server-ivory-mu.vercel.app/allclass')
         .then(res => res.json())
         .then(data =>setClas(data))
     },[])
+    console.log(clas);
     return (
         <div>
             <SectionTitle
