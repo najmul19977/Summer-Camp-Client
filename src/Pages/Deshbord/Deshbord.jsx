@@ -25,13 +25,13 @@ const Deshbord = () => {
 
                     {
                         isAdmin ? <>
-                            <li><Link to='/deshbord/home'><FaHome></FaHome>Admin Home</Link></li>
+                            <li><Link to='/deshbord/adminhome'><FaHome></FaHome>Admin Home</Link></li>
                             <li><Link to='/deshbord/addclass'><FaShoppingCart></FaShoppingCart> Add Class</Link></li>
                             <li><Link to='/deshbord/manageclass'><FaCalendarAlt></FaCalendarAlt>Manage Class</Link> </li>
                             <li><Link to='/deshbord/allusers'><FaUsers></FaUsers>Manage User</Link> </li>
 
                         </> : <>
-                            <li><Link to='/deshbord/home'><FaHome></FaHome>User Home</Link></li>
+                            <li><Link to='/deshbord/userhome'><FaHome></FaHome>User Home</Link></li>
                             <li><Link to='/deshbord/myclass'><FaShoppingCart></FaShoppingCart> My Class</Link></li>
                             <li><Link to='/deshbord/history'><FaWallet></FaWallet>Payment History</Link></li>
                             <li><Link to='/deshbord/reservations'><FaCalendarAlt></FaCalendarAlt>Reservations</Link> </li>

@@ -63,7 +63,7 @@ const ClassCategoryCard = ({ item }) => {
                 <h2 className="card-title">{name}</h2>
                 <p>{title}</p>
                 <p>{class_duration}</p>
-                <p>Avaliable:{sit}</p>
+                <p>Avaliable sit:{sit}</p>
                 <p>Price:${course_Free}</p>
                 <div className="card-actions justify-end">
                     <button onClick={() =>handleAddToCart(item)} className="btn btn-primary">Add To Cart</button>

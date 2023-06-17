@@ -16,6 +16,8 @@ import AllUser from "../Pages/Deshbord/AllUser/AllUser";
 import AddClass from "../Pages/Deshbord/AddClass/AddClass";
 import AdminRouts from "./AdminRoutes";
 import ManageClass from "../Pages/Deshbord/ManageClass/ManageClass";
+import UserHome from "../Pages/Deshbord/UserHome/UserHome";
+import AdminHome from "../Pages/Deshbord/AdminHome/AdminHome";
 
   export const router = createBrowserRouter([
     {
@@ -56,13 +58,23 @@ import ManageClass from "../Pages/Deshbord/ManageClass/ManageClass";
         path:'deshbord',
         element:<PrivateRouts><Deshbord></Deshbord></PrivateRouts>,
         children:[
+          {
+            path:'userhome',
+            element:<UserHome></UserHome>
+
+          },
          {
           path:'myclass',
           element:<MyClass></MyClass>
          },
          {
+          path:'adminhome',
+          element:<AdminRouts><AdminHome></AdminHome></AdminRouts>
+
+         },
+         {
           path:'allusers',
-          element:<AllUser></AllUser>
+          element:<AdminRouts><AllUser></AllUser></AdminRouts>
          },
          {
           path:'addclass',

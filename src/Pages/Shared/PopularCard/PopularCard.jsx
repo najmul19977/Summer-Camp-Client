@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PopularCard = ({item}) => {
     const {image,_id,title,course_Free,name,class_duration,sit} =item;
@@ -16,7 +17,7 @@ const PopularCard = ({item}) => {
 
                 <p>Price :{course_Free}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={()=>handleAddToCart(item)} className="btn btn-primary ">Add to Cart</button>
+                   <Link to='ourclass'> <button onClick={()=>handleAddToCart(item)} className="btn btn-primary ">Add to Cart</button></Link>
                 </div>
             </div>
         </div>

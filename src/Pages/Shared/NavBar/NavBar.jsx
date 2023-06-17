@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaShoppingCart } from 'react-icons/fa';
 import useCart from "../../../Hooks/useCart";
+import useAdmin from "../../../Hooks/useAdmin";
 
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isAdmin] = useAdmin();
     const [cart] = useCart();
     const handleLogOut = () => {
         logOut()
@@ -26,9 +28,12 @@ const NavBar = () => {
                         <li><Link to='ourclass'>Our Class</Link></li>
 
                         <li><Link to='instructor'>Our Instructor</Link></li>
-                        <li><Link to='deshbord'>Deshbord</Link></li>
-                        <li><Link to='secret'>Secrete</Link></li>
-                        <li><Link to="/">
+                        {
+                            isAdmin ? <li><Link to='/deshbord/adminhome'>Deshbord</Link></li> :
+                            <li><Link to='/deshbord/userhome'>Deshbord</Link></li>
+                        }
+                        
+                        <li><Link to="/deshbord/myclass">
                         <button className="btn">
                             <FaShoppingCart></FaShoppingCart>
                             <div className="badge badge-secondary">+{cart?.length || 0}</div>
@@ -52,8 +57,11 @@ const NavBar = () => {
                     <li><Link to='ourclass'>Our Class</Link></li>
 
                     <li><Link to='instructor'>Our Instructor</Link></li>
-                    <li><Link to='deshbord'>Deshbord</Link></li>
-                    <li><Link to='secret'>Secrete</Link></li>
+                    {
+                            isAdmin ? <li><Link to='/deshbord/adminhome'>Deshbord</Link></li> :
+                            <li><Link to='/deshbord/userhome'>Deshbord</Link></li>
+                    }
+                    
                     <li><Link to="/deshbord/myclass">
                         <button className="btn">
                             <FaShoppingCart></FaShoppingCart>
@@ -67,16 +75,14 @@ const NavBar = () => {
                                     <img src={user?.photoURL} />
                                 </div>
                             </div>
-                            <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
+                            <button onClick={handleLogOut} className="btn btn-active btn-ghost ">LogOut</button>
                         </> : <>
                             <li><Link to='login'>Login</Link></li>
                         </>
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
+           
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import ClassCategory from "../ClassCategory/ClassCategory";
-import PopularClass from "../Home/Home/PopularClass/PopularClass";
+
 import Banner from "../Shared/Banner/Banner";
 
 
@@ -10,7 +10,7 @@ const OurClass = () => {
         <div>
            
           <Banner></Banner>
-          <PopularClass></PopularClass>
+          
           <ClassCategory></ClassCategory>
           
           
